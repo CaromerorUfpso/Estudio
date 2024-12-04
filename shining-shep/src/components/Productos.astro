@@ -1,0 +1,20 @@
+---
+const {link} = Astro.props;
+const {secundario = false} = Astro.props;
+---
+
+<div class="ml-[15%] border-2 border-black flex w-[900px]"
+class:list={{"bg-gray-700 border-red-600" : secundario}}
+>
+    
+    <img src={link} alt="Img1 " class="w-auto h-[380px]">
+    <div class="grid items-center justify-center ml-6">
+        <slot name="tituloDerecha">
+        <a>Me gustan las cocotas</a>
+    </slot>
+    <slot name="descripcion">
+        <a>akncndxjazcbnoi opajm ihdq ajoipka jpoias jcpkai jcnaod akipa ,cjna`dchw oaihcuac`a cda acdcdadxc </a>
+    </slot>
+    </div>
+    
+</div>

@@ -1,0 +1,25 @@
+---
+import Productos from "../../components/Productos.astro";
+import Layout from "../../layouts/Layout.astro";
+const {img1 = "src/components/img/Dreadnoughtus.png"} = Astro.props;
+const {img2 = "src/components/img/AsaExtintion.png" } =Astro.props;
+---
+
+<Layout>
+    <div class="h-5 bg-red-600 text-black font-bold">
+        <a>Vaina loca</a>
+        
+    </div>
+    <div>
+        <Productos link={img1}/>
+        <Productos secundario link={img1}/>
+        <Productos link={img2}>
+            <span slot="tituloDerecha">
+                <a>Chi cheñol</a>
+            </span>
+            <span slot="descripcion">
+                <a>Que rico</a>
+            </span>
+        </Productos>
+    </div>
+</Layout>
