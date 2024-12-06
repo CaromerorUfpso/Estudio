@@ -1,0 +1,20 @@
+---
+import { Icon } from 'astro-icon/components'
+const { kaka = false } =Astro.props;
+const {elink1} = Astro.props;
+const {elink2} = Astro.props;
+
+---
+<div class="rounded-md bg-green-500 text-black flex w-24 ml-[50%]"
+class:list={{"bg-slate-800 text-white" : kaka}}
+>
+    <slot name="firstIcon">
+        <Icon name={elink1}/>
+    </slot>
+    <slot name="text">
+        <a>Log In</a>
+    </slot>
+    <slot name="secondIcon">
+        <Icon name={elink2}/>
+    </slot>
+</div>
